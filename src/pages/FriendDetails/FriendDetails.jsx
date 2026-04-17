@@ -66,7 +66,7 @@ const FriendDetails = () => {
           <h1 className="text-3xl text-black font-bold text-center mt-6">{friend.name}</h1>
 
           <div className={`mt-3 mx-auto w-fit px-6 py-1.5 rounded-full text-sm font-medium
-            ${friend.status === 'overdue' ? 'bg-red-100 text-red-700' :
+            ${friend.status === 'overdue' ? 'bg-red-100 text-red-600' :
               friend.status === 'almost due' ? 'bg-yellow-100 text-yellow-700' :
                 'bg-emerald-100 text-emerald-700'}`}>
             {friend.status.toUpperCase().replace('-', ' ')}
