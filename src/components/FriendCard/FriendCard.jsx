@@ -22,7 +22,7 @@ const FriendCard = ({ friend }) => {
           alt={friend.name}
           className="w-20 h-20 rounded-2xl object-cover mx-auto"
         />
-        <h3 className="text-center font-semibold mt-3 text-lg">
+        <h3 className="text-center font-semibold object-cover mt-3 text-lg">
           {friend.name}
         </h3>
 
