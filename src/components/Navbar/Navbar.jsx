@@ -22,14 +22,14 @@ const Navbar = () => {
             to="/timeline"
             className={({ isActive }) => `flex items-center gap-2 transition ${isActive ? 'text-emerald-600 border-b-2 rounded  font-semibold' : 'text-gray-600 hover:text-gray-900'}`}
           >
-            <FaClock size={20} /> Timeline
+            <FaClock size={19} /> Timeline
           </NavLink>
 
           <NavLink
             to="/stats"
             className={({ isActive }) => `flex items-center gap-2 transition ${isActive ? 'text-emerald-600 border-b-2 rounded  font-semibold' : 'text-gray-600 hover:text-gray-900'}`}
           >
-            <FaChartBar size={20} /> Stats
+            <FaChartBar size={19} /> Stats
           </NavLink>
         </div>
       </div>
