@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-green-900 text-white border-t py-10 mt-auto">
+    <footer className="bg-green-800 text-white border-t py-10 mt-auto">
       <div className="max-w-7xl mx-auto px-6 text-center  ">
         <div className="flex items-center justify-center gap-3 mb-4 ">
           <h3 className="text-6xl font-bold text-white">KeenKeeper</h3>
@@ -36,15 +36,15 @@ const Footer = () => {
 
 
       </div>
-              <hr className=" text-gray-400 mt-8 mb-8 w-full" />
+      <hr className=" text-gray-400 mt-8 mb-8 w-full" />
 
-        <div>
-          <p className="text-xs text-gray-400 mt-6 flex items-center justify-center">
-            © 2026 KeenKeeper • Made with
-            <HiHeart className="text-red-700 h-8 w-8 " /> for keeping
-            relationships strong
-          </p>
-        </div>
+      <div>
+        <p className="text-xs text-gray-400 mt-6 flex items-center justify-center">
+          © 2026 KeenKeeper • Made with
+          <HiHeart className="text-red-700 h-8 w-8 " /> for keeping
+          relationships strong
+        </p>
+      </div>
     </footer>
   );
 };
