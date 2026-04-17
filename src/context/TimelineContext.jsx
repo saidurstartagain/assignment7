@@ -10,10 +10,10 @@ export const TimelineProvider = ({ children }) => {
   const addInteraction = (type, friendName) => {
     const newEntry = {
       id: Date.now(),
-      date: new Date().toLocaleDateString('en-GB', { 
-        day: 'numeric', 
-        month: 'short', 
-        year: 'numeric' 
+      date: new Date().toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
       }),
       type: type,
       title: `${type} with ${friendName}`

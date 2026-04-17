@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaPhone, FaSms, FaVideo, FaClock, FaArchive, FaTrash } from 'react-icons/fa';
 import { toast } from 'sonner';
-import { useTimeline } from '../../context/TimelineContext'; 
+import { useTimeline } from '../../context/TimelineContext';
 
 const FriendDetails = () => {
   const { id } = useParams();
-  const { addInteraction } = useTimeline(); 
-  
+  const { addInteraction } = useTimeline();
+
   const [friend, setFriend] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -26,11 +26,11 @@ const FriendDetails = () => {
       });
   }, [id]);
 
-  
+
   const handleQuickCheckIn = (type) => {
     if (!friend) return;
 
-   
+
     addInteraction(type, friend.name);
 
 
@@ -49,26 +49,26 @@ const FriendDetails = () => {
   }
 
   if (!friend) {
-    return <div className="text-center py-20 text-red-600 font-bold">Friend not found!</div>;
+    return <div className="text-center py-20 text-red-500 font-bold">Friend not found!</div>;
   }
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-10">
       <div className="grid md:grid-cols-2 gap-8">
-        
+
         {/* Left Column - Profile Card */}
         <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-50">
-          <img 
-            src={friend.picture} 
-            alt={friend.name} 
-            className="w-32 h-32 rounded-3xl mx-auto object-cover ring-4 ring-emerald-50" 
+          <img
+            src={friend.picture}
+            alt={friend.name}
+            className="w-32 h-32 rounded-3xl mx-auto object-cover ring-4 ring-emerald-50"
           />
           <h1 className="text-3xl text-black font-bold text-center mt-6">{friend.name}</h1>
-          
+
           <div className={`mt-3 mx-auto w-fit px-6 py-1.5 rounded-full text-sm font-medium
-            ${friend.status === 'overdue' ? 'bg-red-100 text-red-700' : 
-              friend.status === 'almost due' ? 'bg-yellow-100 text-yellow-700' : 
-              'bg-emerald-100 text-emerald-700'}`}>
+            ${friend.status === 'overdue' ? 'bg-red-100 text-red-700' :
+              friend.status === 'almost due' ? 'bg-yellow-100 text-yellow-700' :
+                'bg-emerald-100 text-emerald-700'}`}>
             {friend.status.toUpperCase().replace('-', ' ')}
           </div>
 
@@ -123,7 +123,7 @@ const FriendDetails = () => {
             <h3 className="font-bold mb-6 text-xl text-gray-800">Quick Check-in</h3>
             <div className="grid grid-cols-3 gap-4">
               {/* Call Button */}
-              <button 
+              <button
                 onClick={() => handleQuickCheckIn('Call')}
                 className="flex flex-col items-center gap-3 p-6 border-2 border-dashed border-gray-200 hover:border-emerald-500 rounded-3xl hover:bg-emerald-50 transition-all active:scale-95 group"
               >
@@ -132,7 +132,7 @@ const FriendDetails = () => {
               </button>
 
               {/* Text Button */}
-              <button 
+              <button
                 onClick={() => handleQuickCheckIn('Text')}
                 className="flex flex-col items-center gap-3 p-6 border-2 border-dashed border-gray-200 hover:border-emerald-500 rounded-3xl hover:bg-emerald-50 transition-all active:scale-95 group"
               >
@@ -141,7 +141,7 @@ const FriendDetails = () => {
               </button>
 
               {/* Video Button */}
-              <button 
+              <button
                 onClick={() => handleQuickCheckIn('Video')}
                 className="flex flex-col items-center gap-3 p-6 border-2 border-dashed border-gray-200 hover:border-emerald-500 rounded-3xl hover:bg-emerald-50 transition-all active:scale-95 group"
               >
